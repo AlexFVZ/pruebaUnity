@@ -8,20 +8,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <dev.xtec.pruebaunity.ExempleView
-        android:id="@+id/exempleView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        />
+        android:text="Hello World!" />
 
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
+        android:id="@+id/buttonBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <dev.xtec.pruebaunity.ExempleView
+        android:id="@+id/exempleView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:text="circulo centro"/>
 
 
 </LinearLayout>
