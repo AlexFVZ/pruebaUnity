@@ -16,12 +16,13 @@
     <Button
         android:id="@+id/buttonBT"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Circulo"/>
 
-    <dev.xtec.pruebaunity.ExempleView
+    <dev.xtec.pruebaunity.CercleView
         android:id="@+id/exempleView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="circulo centro"/>
 
 

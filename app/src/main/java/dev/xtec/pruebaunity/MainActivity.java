@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    ExempleView vistaExample;
+    CercleView vistaExample;
     Button bt;
     View.OnClickListener listener;
 
@@ -23,16 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
         vistaExample = findViewById(R.id.exempleView);
         bt=findViewById(R.id.buttonBT);
+
+        ThreadAnimacio threadCercle = new ThreadAnimacio(vistaExample);
+        vistaExample.init();
+        threadCercle.start();
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
-                if (vistaExample.cercleblau) {
-                    vistaExample.cercleblau=false;
-                    vistaExample.nau.setPosX(50);
-                } else {
-                    vistaExample.cercleblau=true;
-                    vistaExample.nau.setPosX(350);
-                }
+//                if (vistaExample.cercleblau) {
+//                    vistaExample.cercleblau=false;
+//                    vistaExample.nau.setPosX(50);
+//                } else {
+//                    vistaExample.cercleblau=true;
+//                    vistaExample.nau.setPosX(350);
+//                }
+                vistaExample.mou();
                 vistaExample.postInvalidate();
             }
         });
