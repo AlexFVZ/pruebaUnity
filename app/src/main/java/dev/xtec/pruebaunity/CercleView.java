@@ -17,6 +17,7 @@ public class CercleView extends View {
 
     Context context;
     int posx,posy,ampleView,altView,velocidad,radi;
+    boolean direccionX=true,direccionY=true;
 
 
     public CercleView(Context context){
@@ -53,9 +54,38 @@ public class CercleView extends View {
     }
 
     public void mou(){
-        posx=posx+velocidad;
-        posy=posy+velocidad;
-        if (posx+radi>ampleView)posx=0+radi;
-        if(posy+radi>altView)posy=0+radi;
+//        posx=posx+velocidad;
+//        posy=posy+velocidad;
+        if (posx+radi>ampleView )
+        {
+            direccionX=false;
+            posx=ampleView-radi;
+        }
+        if (posx-radi<0 )
+        {
+            direccionX=true;
+            posx=radi;
+        }
+        if(posy+radi>altView)
+        {
+            direccionY=false;
+            posy=altView-radi;
+        }
+        if (posy-radi<0){
+            direccionY=true;
+            posy=radi;
+        }
+        if(direccionX){
+            posx=posx+velocidad;
+        }
+        else{
+            posx=posx-velocidad;
+        }
+        if (direccionY){
+            posy=posy+velocidad;
+        }
+        else {
+            posy=posy-velocidad;
+        }
     }
 }
